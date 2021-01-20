@@ -1,0 +1,63 @@
+.speakers {
+
+  &__heading {
+    font-family: 'Georgia', sans-serif;
+    font-size: 37.3px;
+    margin-top: 1em;
+    margin-bottom: 0.6em;
+	}
+
+  &__heading:after {
+    content: '';
+    background-image: url('../img/crown.png');
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-size: 1em;
+    width: 1em;
+    height: 1em;
+    margin-bottom: -0.2em;
+    margin-left: 0.3em;
+	}
+
+	&__banner-container {
+    display: flex;
+    justify-content: space-between;
+	}
+
+	&__banner {
+    flex-basis: 49.9%;
+    height: 263px;
+    border-bottom: 18px solid #D72C46;
+    position: relative;
+	}
+
+  &__banner:first-child {
+    background: url('../img/ph1.jpg') no-repeat;
+    background-size: 100%;
+  }
+
+  &__banner:last-child {
+    background: url('../img/ph2.jpg') no-repeat;
+    background-size: 100%;
+  }
+
+  &__text-wrapper {
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+  }
+
+  &__text {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+  }
+
+	&__position {
+    font-size: 21.3px;
+	}
+
+	&__name {
+    font-size: 25.3px;
+	}
+
+}

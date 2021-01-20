@@ -1,0 +1,86 @@
+.header {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15.8px;
+  // position: fixed;
+  background: rgb(49,49,49);
+  background: linear-gradient(0deg, rgba(49,49,49,1) 0%, rgba(74,74,74,1) 50%, rgba(107,107,107,1) 100%);
+  padding-top: 1em;
+  padding-bottom: 1em;
+  color: white;
+
+	&__menu {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    width: 45%;
+
+    @media screen and (max-width: 1600px) {
+      width: 65%;
+    }
+
+    @media screen and (max-width: 1366px) {
+      width: 75%;
+    }
+
+    @media screen and (max-width: 1024px) {
+      width: 65%;
+    }
+
+    @media screen and (max-width: 420px) {
+      width: 100%;
+      margin: 0;
+    }
+	}
+
+	&__menu-item {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+
+    @media screen and (max-width: 420px) {
+      flex-basis: 40%;
+    }
+	}
+
+  &__menu-item:nth-child(odd) {
+    @media screen and (max-width: 420px) {
+      padding-left: 10%;
+    }
+  }
+
+  &__menu-item:hover {
+    color: #D82743;
+  }
+
+  &__menu-item:nth-child(odd):before {
+    background-image: url('../img/fish-inactive.png');
+    content: '';
+    background-size: 1.4em;
+    background-repeat: no-repeat;
+    display: inline-block;
+    padding-right: 0.5em;
+    margin-bottom: -0.4em;
+    width: 1.4em;
+    height: 1.4em;
+  }
+
+  &__menu-item:nth-child(even):before {
+    background-image: url('../img/turtle-inactive.png');
+    content: '';
+    background-size: 1.8em;
+    background-repeat: no-repeat;
+    display: inline-block;
+    padding-right: 0.5em;
+    margin-bottom: -0.8em;
+    width: 1.8em;
+    height: 1.8em;
+  }
+
+  &__menu-item:nth-child(odd):hover:before {
+    background-image: url('../img/fish-active.png');
+  }
+  //красной черепашки в макете не было
+}

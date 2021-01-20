@@ -1,0 +1,26 @@
+.body {
+  font-family: 'Georgia', sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  background: url('../img/background.png');
+
+  // @media screen and (max-width: 420px) {
+  //   font-size: 20pt;
+  // }
+
+  &__section {
+    padding-left: 22.5%;
+    padding-right: 22.5%;
+    width: 55%;
+    @media screen and (max-width: 1030px) {
+      padding-left: 5%;
+      padding-right: 5%;
+      width: 90%;
+    }
+    @media screen and (max-width: 420px) {
+      padding-left: 3%;
+      padding-right: 3%;
+      width: 94%;
+    }
+  }
+}
