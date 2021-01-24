@@ -1,3 +1,5 @@
+@import '_vars.scss';
+
 .speakers {
   margin-top: 90px;
 
@@ -7,6 +9,7 @@
 
   &__heading {
     font-family: 'Georgia', sans-serif;
+    color: #1d1d1d;
     font-size: 34px;
     margin-top: 1em;
     margin-bottom: 0.6em;
@@ -25,10 +28,11 @@
 	}
 
 	&__banner-container {
+    -js-display: flex;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    border-bottom: 18px solid #D72C46;
+    border-bottom: 18px solid $color-red;
 
 	}
 
@@ -127,5 +131,4 @@
       width: 135px;
     }
 	}
-
 }

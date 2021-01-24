@@ -16,7 +16,9 @@ function convertSass(done) {
     .on('error', console.error.bind(console))
     .pipe(autoprefixer({
       // browsers: ['last 2 versions'],
-      cascade: false
+      overrideBrowserslist: ['last 2 version', 'ie 9', 'ios 6', 'android 4'],
+      cascade: false,
+      grid: 'autoplace'
     }))
     .pipe(rename({suffix: '.min'}))
     .pipe(sourcemaps.write('./'))

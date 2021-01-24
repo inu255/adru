@@ -1,8 +1,11 @@
+@import '_vars.scss';
+
 .header {
   font-family: 'Open Sans', sans-serif;
   font-size: 13.85px;
   position: fixed;
   top: 0;
+  z-index: 10;
   background: rgb(49,49,49);
   background: linear-gradient(0deg, rgba(49,49,49,1) 0%, rgba(74,74,74,1) 50%, rgba(107,107,107,1) 100%);
   padding-top: 1em;
@@ -10,6 +13,7 @@
   color: white;
 
 	&__menu {
+    -js-display: flex;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -53,7 +57,7 @@
   }
 
   &__menu-item:hover {
-    color: #D82743;
+    color: $color-red;
   }
 
   &__menu-item:nth-child(odd):before {

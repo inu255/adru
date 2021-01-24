@@ -2,11 +2,8 @@
   font-family: 'Georgia', sans-serif;
   font-size: 24px;
   line-height: 32px;
+  color: #373737;
   background: url('../img/background.png');
-
-  // @media screen and (max-width: 420px) {
-  //   font-size: 20pt;
-  // }
 
   &__section {
     padding-left: 22.5%;
@@ -29,6 +26,24 @@
       padding-left: 3%;
       padding-right: 3%;
       width: 94%;
+    }
+  }
+
+  &__container {
+    display: grid;
+    -ms-grid-columns: 1fr 30px 1fr 30px 1fr;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 3fr;
+    grid-gap: 30px;
+    margin-top: 20px;
+    margin-bottom: 260px;
+
+    @media screen and (max-width: 770px) {
+      margin-bottom: 200px;
+    }
+
+    @media screen and (max-width: 420px) {
+      margin-bottom: 120px;
     }
   }
 }

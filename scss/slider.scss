@@ -1,0 +1,103 @@
+@import '_vars.scss';
+
+.slider {
+  font-family: 'Arial', sans-serif;
+  grid-column: 1 / 5;
+  grid-row: 1;
+  font-size: 16px;
+  position: relative;
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+     margin-right: 30px;
+  }
+
+  @media screen and (max-width: 420px) {
+    grid-column: 1 / 7;
+  }
+
+	&__item {
+    display: none;
+	}
+
+	&__text {
+    margin: 15px 0;
+    line-height: 1.2em;
+
+    &:first-child {
+      margin-top: 0;
+      line-height: 1.7em;
+      background: $color-red;
+      color: white;
+      width: fit-content;
+    }
+	}
+
+  &__arrow {
+    cursor: pointer;
+    position: absolute;
+    width: auto;
+    color: $color-brown;
+    font-weight: bold;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+
+    &__hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+  }
+
+  &__prev {
+    left: 0;
+  }
+
+  &__next {
+    right: 0;
+  }
+
+  &__controls {
+    text-align: center;
+    font-size: 16px;
+    width: 20%;
+    margin: 0 auto;
+    position: relative;
+
+    @media screen and (max-width: 1300px) {
+      width: 25%;
+    }
+
+    @media screen and (max-width: 800px) {
+      width: 30%;
+    }
+
+    @media screen and (max-width: 420px) {
+      width: 37%;
+    }
+  }
+
+  &__dot {
+    cursor: pointer;
+    height: 2em;
+    width: 1.5em;
+    padding: 5px 2px;
+    margin: 0 10px;
+    background-color: $color-brown;
+    color: white;
+    transition: background-color 0.6s ease;
+    user-select: none;
+
+    &--active {
+      background: $color-red;
+    }
+  }
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
